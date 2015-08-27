@@ -1,0 +1,164 @@
+﻿html
+{
+    height: 100%;
+    overflow: hidden;
+}
+
+body
+{
+    margin: 0;
+    background: #F1EFE2;
+    font-size: 1.6em;
+    font-family: "Segoe UI" , georgia, "trebuchet ms" , arial, serif;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.grid
+{
+    display: table;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    display: table-row;
+    height: 100px;
+}
+
+h1
+{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    color: #345;
+    float: left;
+}
+h2
+{
+    color: #678;
+    font-size: 1.1em;
+}
+
+header ul
+{
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+header ul li
+{
+    display: inline;
+}
+
+header ul input[type=button]
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid #F1EFE2;
+    background-color: #6B9A49;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: normal;
+    color: #F1EFE2;
+}
+
+header ul input[type=button]:hover
+{
+    background: #345;
+    border-radius: 15px;
+}
+
+#stats
+{
+    color: #fff;
+    font-size: 0.5em;
+    position: absolute;
+    right: 5px;
+    top: 130px;
+}
+
+#gameZone
+{
+    font-size: 1em;
+    display: table-row;
+    background-color: #000;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+.webGLCanvas
+{
+    position: fixed;
+}
+
+.svgContainer
+{
+    position: fixed;
+    bottom: 0;
+    height: calc(100% - 130px);
+    width: 100%;
+}
+
+footer
+{
+    font-size: 0.5em;
+    display: table-row;
+    height: 40px;
+}
+
+footer ul
+{
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer ul li
+{
+    display: inline;
+    margin: 0px 10px 0px 10px;
+}
+
+footer ul a
+{
+    color: #345;
+    text-decoration: none;
+}
+
+footer ul a:hover, footer ul a:focus
+{
+    text-decoration: underline;
+}
+
+.gameBall
+{
+    fill: #6B9A49;
+    stroke: #FFF;
+    stroke-width: 2;
+}
+
+.gamePad
+{
+    fill: #6B9A49;
+    stroke: #FFF;
+    stroke-width: 2;
+}
+
+.gameMessage
+{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 40%;
+    text-align: center;
+    font-size: 3em;
+    background: red;
+    visibility: hidden;
+}
