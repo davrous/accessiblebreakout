@@ -197,12 +197,12 @@ module BrikBrok {
             if (BABYLON.Engine.audioEngine.canUseWebAudio) {
                 var assetsManager = new BABYLON.AssetsManager(this._scene);
 
-                var binaryTask = assetsManager.addBinaryFileTask("music task", "/sounds/techno.wav");
+                var binaryTask = assetsManager.addBinaryFileTask("music task", "sounds/techno.wav");
                 binaryTask.onSuccess = (task: any) => {
                     this._music = new BABYLON.Sound("Music", task.data, this._scene, null, { loop: true, spatialSound: true });
                 };
 
-                var binaryTask = assetsManager.addBinaryFileTask("jump task", "/sounds/jump.mp3");
+                var binaryTask = assetsManager.addBinaryFileTask("jump task", "sounds/jump.mp3");
                 binaryTask.onSuccess = (task: any) => {
                     this._jumpSound = new BABYLON.Sound("Jump", task.data, this._scene, null, { spatialSound: true });
                 };
@@ -328,7 +328,8 @@ module BrikBrok {
             }
 
             if (this._bricksCount < 10) {
-                console.log();
+                // Could be a good idea to tell to the blind users
+                // where the remaining bricks are located (left, right, center?)
             }
 
             // Ball
@@ -465,10 +466,10 @@ module BrikBrok {
             }
 
             if (this.visuallyImpaired) {
-                loadStyleSheet('/css/indexvi.css', null, this);
+                loadStyleSheet('css/indexvi.css', null, this);
             }
             else {
-                loadStyleSheet('/css/index.css', null, this);
+                loadStyleSheet('css/index.css', null, this);
             }
 
             this._padWidth = this._pad.width.baseVal.value;

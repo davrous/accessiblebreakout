@@ -144,11 +144,11 @@ var BrikBrok;
             // You need a Web Audio compatible browser
             if (BABYLON.Engine.audioEngine.canUseWebAudio) {
                 var assetsManager = new BABYLON.AssetsManager(this._scene);
-                var binaryTask = assetsManager.addBinaryFileTask("music task", "/sounds/techno.wav");
+                var binaryTask = assetsManager.addBinaryFileTask("music task", "sounds/techno.wav");
                 binaryTask.onSuccess = function (task) {
                     _this._music = new BABYLON.Sound("Music", task.data, _this._scene, null, { loop: true, spatialSound: true });
                 };
-                var binaryTask = assetsManager.addBinaryFileTask("jump task", "/sounds/jump.mp3");
+                var binaryTask = assetsManager.addBinaryFileTask("jump task", "sounds/jump.mp3");
                 binaryTask.onSuccess = function (task) {
                     _this._jumpSound = new BABYLON.Sound("Jump", task.data, _this._scene, null, { spatialSound: true });
                 };
@@ -248,7 +248,6 @@ var BrikBrok;
                 }
             }
             if (this._bricksCount < 10) {
-                console.log();
             }
             // Ball
             this._ball.setAttribute("cx", this._ballX);
@@ -361,10 +360,10 @@ var BrikBrok;
                 this._ballSpeed = BrikBrok.DEFAULT_BALL_SPEED;
             }
             if (this.visuallyImpaired) {
-                loadStyleSheet('/css/indexvi.css', null, this);
+                loadStyleSheet('css/indexvi.css', null, this);
             }
             else {
-                loadStyleSheet('/css/index.css', null, this);
+                loadStyleSheet('css/index.css', null, this);
             }
             this._padWidth = this._pad.width.baseVal.value;
             this._padHeight = this._pad.height.baseVal.value;
